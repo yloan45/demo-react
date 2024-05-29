@@ -1,3 +1,9 @@
+npm create-react-app project
+npm install --save-exact react-bootstrap@2.2.2 bootstrap@5.1.3 sass@1.49.10 axios@0.26.1
+npm install --save-exact react-paginate@8.1
+npm install --save-exact react-toastify@8.2.0
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

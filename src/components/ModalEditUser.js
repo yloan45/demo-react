@@ -18,56 +18,60 @@ const ModalEditUser = ({ show, handleClose, userData, handleEditUser }) => {
     };
 
     return (
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Edit User</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <Form>
-                    <Form.Group className="mb-3">
-                        <Form.Label>First Name</Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder="Enter first name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Last Name</Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder="Enter last name"
-                            value={job}
-                            onChange={(e) => setJob(e.target.value)}
-                        />
-                    </Form.Group>
-                </Form>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
-                <Button variant="primary" onClick={handleSaveChanges}>
-                    Save Changes
-                </Button>
-            </Modal.Footer>
-        </Modal>
+        <>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Edit User</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group className="mb-3">
+                            <Form.Label>First Name</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="Enter first name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Last Name</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="Enter last name"
+                                value={job}
+                                onChange={(e) => setJob(e.target.value)}
+                            />
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleSaveChanges}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
+        </>
 
-       
+
+
 
     );
-    <ToastContainer
-    position="top-right"
-    autoClose={5000}
-    hideProgressBar={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-    pauseOnHover
-  />
+
 };
 
 export default ModalEditUser;
